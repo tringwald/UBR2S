@@ -1,0 +1,6 @@
+# Ablation parameters
+use_decision_error: False
+use_sample_likelihood: False
+
+use_dss_for_pretraining: ['SOURCE']
+use_dss_for: ['SOURCE', 'TARGET']

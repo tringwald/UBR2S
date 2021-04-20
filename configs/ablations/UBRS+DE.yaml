@@ -1,0 +1,3 @@
+# Ablation parameters
+use_decision_error: True
+use_sample_likelihood: False

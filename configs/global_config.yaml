@@ -1,0 +1,82 @@
+datasets:
+  VISDA17:
+    pattern: "/path/to//VisDA-2017/<domain>/<class>/<image>"
+    file_extentions: ['jpeg', 'jpg', 'png']
+    domains: ['train', 'validation', 'test_new', 'test_nosym']
+    num_classes: 12
+  Office-Home:
+    pattern: "/path/to//Office-Home/<domain>/<class>/<image>"
+    domains: ['Art', 'Clipart', 'Product', 'Real World']
+    num_classes: 65
+  Office-Caltech:
+    pattern: "/path/to//Office-Caltech/<domain>/<class>/<image>"
+    domains: ['amazon', 'caltech', 'dslr', 'webcam']
+    num_classes: 10
+  Office-31:
+    pattern: "/path/to//Office-31/<domain>/images/<class>/<image>"
+    domains: ['amazon', 'dslr', 'webcam']
+    num_classes: 31
+  ImageCLEF:
+    pattern: "/path/to//ImageCLEF-2014/<domain>/<class>/<image>"
+    domains: ['bing', 'caltech', 'imagenet', 'pascal']
+    num_classes: 12
+  Adaptiope:
+    pattern: "/path/to//Adaptiope/<domain>/<class>/<image>"
+    domains: ['product', 'real_life', 'synthetic']
+    num_classes: 123
+
+# Paths for logging and snapshotting
+paths:
+  log_dir: "/path/to/logging/dir"
+  tmp_dir: "/path/to/tmp/dir"
+
+# Misc
+gpus: [0, 1, 2, 3]
+seed: 1
+debug: False
+ignore_params: []
+pretrained: True
+
+# Hyperparameters
+lsm_eps: 0.25
+batch_size: 240
+sample_num_classes: 12
+sample_bins: [5, 3, 2]
+test_batch_size: 512
+workers: 32
+source_iterations: 1000
+test_every: 500
+eval_every_adapt_cycle: 2
+
+adaptation_iterations: 50
+adaptation_resample_every: 10
+adaptation_cycles: 25
+
+# How often a single image is passed through the CNN
+uncertain_repeats: 1
+# How often the MC dropout is applied
+uncertain_mc_iters: 50
+# Put this to 0 to use certainty mode instead of uncertainty
+uncertain_mc_dropout: 0.75
+
+# Ablation parameters
+use_dss_for_pretraining: ['SOURCE']
+use_dss_for: ['SOURCE']
+use_decision_error: True
+use_sample_likelihood: True
+# Whether or not to merge multiple source domains into a single one
+multisource_merged: False
+
+# Optimizer parameters
+optimizer: SGD
+optimizer_params:
+  SOURCE_ONLY_TRAIN:
+    lr: 0.0005
+    weight_decay: 0.00001
+    nesterov: True
+    momentum: 0.95
+  ADAPTATION_TRAIN:
+    lr: 0.00025
+    weight_decay: 0.00001
+    nesterov: True
+    momentum: 0.95
