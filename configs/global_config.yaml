@@ -2,7 +2,7 @@ datasets:
   VISDA17:
     pattern: "/path/to//VisDA-2017/<domain>/<class>/<image>"
     file_extentions: ['jpeg', 'jpg', 'png']
-    domains: ['train', 'validation', 'test_new', 'test_nosym']
+    domains: ['train', 'validation', 'test']
     num_classes: 12
   Office-Home:
     pattern: "/path/to//Office-Home/<domain>/<class>/<image>"
