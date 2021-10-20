@@ -1,3 +1,5 @@
+Implementation for our **BMVC 2021** paper "**UBR²S: Uncertainty-Based Resampling and Reweighting Strategy for Unsupervised Domain Adaptation**".
+
 # Basic setup
 
 - Install environment with ```conda env create --file=environment.yaml --name UBR2S```
@@ -12,3 +14,9 @@
 # Note on reproducibility
 
 For reproducibility, we recommend using Ubuntu 18.04 with 4x 1080Ti GPUs and the above setup steps. Please note that any deviations from this setup can lead to different results.
+
+# Citation
+
+```
+tbd
+```
