@@ -13,5 +13,5 @@ do
   "--configs" "configs/single-source/visda17.yaml" "$i"
   )
   _EXP="ablation_VISDA-TEST_$i"
-  PYTHONHASHSEED=1 CUDA_VISIBLE_DEVICES=0,1,2,3 python3 src/train.py --source-dataset VISDA17/train --target-dataset VISDA17/test_nosym --sub-dir $_EXP "${_ADD_FLAGS[@]}";
+  PYTHONHASHSEED=1 CUDA_VISIBLE_DEVICES=0,1,2,3 python3 src/train.py --source-dataset VISDA17/train --target-dataset VISDA17/test --sub-dir $_EXP "${_ADD_FLAGS[@]}";
 done;
