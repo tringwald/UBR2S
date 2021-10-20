@@ -2,6 +2,10 @@
 
 This repository contains the implementation of the unsupervised domain adaptation method proposed in our **BMVC 2021** paper "**UBR²S: Uncertainty-Based Resampling and Reweighting Strategy for Unsupervised Domain Adaptation**". Given the instructions below, the code can be used to exactly reproduce the results presented in the paper.
 
+<p align="center">
+  <img src="overview.png" width="512" alt="Overview for our UBR²S method.">
+</p>
+
 # Basic setup
 
 - Install environment with ```conda env create --file=environment.yaml --name UBR2S```
