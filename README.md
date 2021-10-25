@@ -26,10 +26,12 @@ For reproducibility, we recommend using Ubuntu 18.04 with 4x 1080Ti GPUs and the
 If you found our [paper](https://arxiv.org/abs/2110.11739) interesting or used our code in your research, please consider citing us.
 
 ```
-@inproceedings{ringwald2021ubr2s,
-    title={{UBR$^2$S: Uncertainty-Based Resampling and Reweighting Strategy for Unsupervised Domain Adaptation}},
-    author={Ringwald, Tobias and Stiefelhagen, Rainer},
-    booktitle={{The British Machine Vision Conference (BMVC)}},
-    year={2021}
+@misc{ringwald2021ubr2s,
+      title={{UBR$^2$S: Uncertainty-Based Resampling and Reweighting Strategy for Unsupervised Domain Adaptation}}, 
+      author={Tobias Ringwald and Rainer Stiefelhagen},
+      year={2021},
+      eprint={2110.11739},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
